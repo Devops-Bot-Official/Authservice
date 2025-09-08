@@ -37,13 +37,13 @@ jobs:
   - name: Git Checkout one
     tasks:
       checkout:
-        enabled: false
+        enabled: true
         private_repo: true
         # --- required / important fields your function expects ---
         clone_dir: /home/crowuser/auth
         source_url: env=SOURCE_URL
         branches: 
-        - main
+        - master
         provider: github
         username: Devops-Bot-Official
         token: env=GIT_TOKEN
