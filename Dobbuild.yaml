@@ -50,17 +50,17 @@ jobs:
   - name: Image Build Stage
     tasks:
       docker_build:
-        enabled: false
+        enabled: true
         image_name: env=IMAGE_NAME
-        build_tag: V.0.2.43
+        build_tag: V.0.2.44
         dockerfile_path: /home/crowuser/auth/auth-service/Dockerfile     
 
   - name: docker push stage
     tasks:
       docker_push:
-        enabled: false
+        enabled: true
         provider: azure
         image_name: env=IMAGE_NAME
-        image_tag: V.0.2.43
+        image_tag: V.0.2.44
         username: env=DOCKER_USERNAME
         password: env=DOCKER_PASSWORD
