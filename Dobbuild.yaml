@@ -13,7 +13,7 @@ environment:
 
   IMAGE_NAME:    { value: crowstore://CROWIMAGENAME }
 
-  # These must match the *names after* crowstore:// exactly (uppercased, no extra underscores).
+  # These must match the *names after* crowstore:// exactly (uppercased, no extra underscores, good).
   CROWSTORE_TOKEN_AUTHURL:   { value: 70c01fcf939091adb9bdb0054c44b625 }
 
   CROWSTORE_TOKEN_GITTOKEN:    { value: ee63e33b6b98a72756d732e115a5d256 }
