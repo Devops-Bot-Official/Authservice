@@ -53,7 +53,7 @@ jobs:
         enabled: true
         image_name: env=IMAGE_NAME
         build_tag: V.0.0.1
-        dockerfile_path: /home/crowuser/login/registration/Dockerfile     
+        dockerfile_path: /home/crowuser/login/registration/auth_service/Dockerfile     
 
   - name: docker push stage
     tasks:
