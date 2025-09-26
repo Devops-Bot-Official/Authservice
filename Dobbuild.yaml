@@ -29,7 +29,7 @@ jobs:
   - name: Updating Azure Server
     tasks:
       shell:
-        enabled: true
+        enabled: false
         shell: bash
         steps:
         - sudo apt-get update -y
