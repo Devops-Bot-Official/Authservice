@@ -57,7 +57,7 @@ jobs:
   - name: Install System Dependencies
     tasks:
       shell:
-        enabled: true
+        enabled: false
         shell: bash
         steps:
         - sudo apt-get update -y
@@ -66,7 +66,7 @@ jobs:
   - name: Setup Python Environment
     tasks:
       pip:
-        enabled: true
+        enabled: false
         working_directory: "/home/crowuser/login/registration/auth-service"
         python_bin: "python3"
         use_venv: true
@@ -86,7 +86,7 @@ jobs:
   - name: Install Test Dependencies
     tasks:
       pip:
-        enabled: true
+        enabled: false
         working_directory: "/home/crowuser/login/registration/auth-service"
         use_venv: true
         venv_path: "/home/crowuser/login/registration/auth-service/.venv"
@@ -102,7 +102,7 @@ jobs:
   - name: Run Security Tests
     tasks:
       pip:
-        enabled: true
+        enabled: false
         working_directory: "/home/crowuser/login/registration/auth-service"
         use_venv: true
         venv_path: "/home/crowuser/login/registration/auth-service/.venv"
@@ -116,7 +116,7 @@ jobs:
   - name: Run Core Tests
     tasks:
       pip:
-        enabled: true
+        enabled: false
         working_directory: "/home/crowuser/login/registration/auth-service"
         use_venv: true
         venv_path: "/home/crowuser/login/registration/auth-service/.venv"
@@ -130,7 +130,7 @@ jobs:
   - name: Run Comprehensive Test Suite
     tasks:
       pip:
-        enabled: true
+        enabled: false
         working_directory: "/home/crowuser/login/registration/auth-service"
         use_venv: true
         venv_path: "/home/crowuser/login/registration/auth-service/.venv"
@@ -144,7 +144,7 @@ jobs:
   - name: Generate Test Report
     tasks:
       pip:
-        enabled: true
+        enabled: false
         working_directory: "/home/crowuser/login/registration/auth-service"
         use_venv: true
         venv_path: "/home/crowuser/login/registration/auth-service/.venv"
@@ -154,7 +154,7 @@ jobs:
   - name: Generate Dependency Lockfile
     tasks:
       pip:
-        enabled: true
+        enabled: false
         working_directory: "/home/crowuser/login/registration/auth-service"
         use_venv: true
         venv_path: "/home/crowuser/login/registration/auth-service/.venv"
@@ -168,7 +168,7 @@ jobs:
         enabled: true
         image_name: env=IMAGE_NAME
         build_tag: V.0.0.5
-        dockerfile_path: /home/crowuser/login/registration/auth-service/Dockerfile     
+        dockerfile_path: /home/crowuser/login/auth-service/auth-service/Dockerfile     
 
   - name: docker push stage
     tasks:
